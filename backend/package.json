@@ -12,8 +12,10 @@
     "build": "tsc",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
+    "postinstall": "npm run build",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "db:test": "node db-test.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",

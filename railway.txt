@@ -1,0 +1,3 @@
+Connection URL: postgresql://postgres:NIPzzfqtzvJaXVbTCdVuujfhcWUkzdfT@ballast.proxy.rlwy.net:57461/railway
+RAW psql command: PGPASSWORD=NIPzzfqtzvJaXVbTCdVuujfhcWUkzdfT psql -h ballast.proxy.rlwy.net -U postgres -p 57461 -d railway
+Railway CLI connect command: railway connect Postgres
