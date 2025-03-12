@@ -1,4 +1,5 @@
 // Simple Express server for Railway deployment
+const cors = require('cors');
 const express = require('express');
 const { Pool } = require('pg');
 require('dotenv').config();
@@ -15,7 +16,11 @@ const pool = new Pool({
 });
 
 // Middleware
-app.use(express.json());
+app.use(cors({
+  origin: '*',  // In production, you'll want to restrict this to your Vercel domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 // Health check endpoint
 app.get('/health', async (req, res) => {
