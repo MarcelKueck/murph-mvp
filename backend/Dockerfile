@@ -6,13 +6,10 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci
+RUN npm install
 
-# Copy source code
-COPY . .
-
-# Build TypeScript
-RUN npm run build
+# Copy server code
+COPY server.js ./
 
 # Expose port
 EXPOSE 5000
